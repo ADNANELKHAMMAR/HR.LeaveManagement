@@ -18,7 +18,7 @@ namespace HR.LeaveManagement.Domain
         //public DateTime? DateActioned { get; set; } 
         public bool? Approved { get; set; }
         public bool Cancelled { get; set; }
-        public string RequestingEmployeeId { get; set; } =string.Empty
+        public string RequestingEmployeeId { get; set; } = string.Empty;
         //[ForeignKey("ApprovedById")]
         ////public Employee ApprovedBy { get; set; }
         //public string ApprovedById { get; set; }

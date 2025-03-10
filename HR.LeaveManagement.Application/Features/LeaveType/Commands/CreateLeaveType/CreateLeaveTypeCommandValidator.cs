@@ -16,8 +16,7 @@ namespace HR.LeaveManagement.Application.Features.LeaveType.Commands.CreateLeave
             _leaveTypeRepository = leaveTypeRepository;
             RuleFor(x => x.DefaultDays).NotEmpty()
                                      .NotNull().WithMessage("{propertyName} is required")
-                                     .GreaterThan(0).WithMessage("{propertyName} should be  greater than 0")
-                                     .LessThan(1).WithMessage("{propertyName} hay hay");
+                                     .GreaterThan(0).WithMessage("{propertyName} should be  greater than 0");
             RuleFor(x => x.Name).NotEmpty().WithMessage("{propertyName} is required")
                                 .MaximumLength(20).WithMessage("{propertyName} with max length of 20");
             RuleFor(x=>x).MustAsync(LeaveTypeNameUnique);

@@ -19,7 +19,7 @@ namespace HR.LeaveManagement.Application.Features.LeaveType.Commands.CreateLeave
                                      .GreaterThan(0).WithMessage("{propertyName} should be  greater than 0");
             RuleFor(x => x.Name).NotEmpty().WithMessage("{propertyName} is required")
                                 .MaximumLength(20).WithMessage("{propertyName} with max length of 20");
-            RuleFor(x=>x).MustAsync(LeaveTypeNameUnique);
+            RuleFor(x=>x).MustAsync(LeaveTypeNameUnique).WithMessage("a leavetype with this name already exists");
             
         }
         private async Task<bool>  LeaveTypeNameUnique(CreateLeaveTypeCommand createLeaveType,CancellationToken token)

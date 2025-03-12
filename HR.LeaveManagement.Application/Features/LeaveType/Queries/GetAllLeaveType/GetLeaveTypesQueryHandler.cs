@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using HR.LeaveManagement.Application.Contracts.Logging;
 using HR.LeaveManagement.Application.Contracts.Persistence;
 using MediatR;
 using System;
@@ -13,17 +14,22 @@ namespace HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveT
     {
         private readonly ILeaveTypeRepository _leaveTypeRepository;
         private readonly IMapper _mapper;
+        private readonly IAppLogger<GetLeaveTypesQueryHandler> _logger;
 
-        public GetLeaveTypesQueryHandler(ILeaveTypeRepository leaveTypeRepository, IMapper mapper)
+        public GetLeaveTypesQueryHandler(ILeaveTypeRepository leaveTypeRepository,
+                                         IMapper mapper,IAppLogger<GetLeaveTypesQueryHandler> logger)
         {
             _leaveTypeRepository = leaveTypeRepository;
             _mapper = mapper;
+            this._logger = logger;
         }
 
         public async Task<List<LeaveTypeDto>> Handle(GetLeaveTypesQuery request, CancellationToken cancellationToken)
         {
             var LeaveTypes = await _leaveTypeRepository.GetAllAsync();
-            return _mapper.Map<List<LeaveTypeDto>>(LeaveTypes);
+            var data =  _mapper.Map<List<LeaveTypeDto>>(LeaveTypes);
+            _logger.LogInformation("Leave Types were retrieved successfully");
+            return data;
         }
     }
 }

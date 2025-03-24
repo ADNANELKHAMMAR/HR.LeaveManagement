@@ -15,10 +15,10 @@ namespace HR.LeaveManagement.Application.Features.LeaveType.Commands.CreateLeave
         {
             _leaveTypeRepository = leaveTypeRepository;
             RuleFor(x => x.DefaultDays).NotEmpty()
-                                     .NotNull().WithMessage("{propertyName} is required")
-                                     .GreaterThan(0).WithMessage("{propertyName} should be  greater than 0");
-            RuleFor(x => x.Name).NotEmpty().WithMessage("{propertyName} is required")
-                                .MaximumLength(20).WithMessage("{propertyName} with max length of 20");
+                                     .NotNull().WithMessage("{PropertyName} is required")
+                                     .GreaterThan(0).WithMessage("{PropertyName} should be  greater than 0");
+            RuleFor(x => x.Name).NotEmpty().WithMessage("{PropertyName} is required")
+                                .MaximumLength(20).WithMessage("{PropertyName} with max length of 20");
             RuleFor(x=>x).MustAsync(LeaveTypeNameUnique).WithMessage("a leavetype with this name already exists");
             
         }

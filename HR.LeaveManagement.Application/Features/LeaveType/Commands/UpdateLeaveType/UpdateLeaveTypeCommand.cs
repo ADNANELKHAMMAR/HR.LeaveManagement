@@ -10,9 +10,7 @@ namespace HR.LeaveManagement.Application.Features.LeaveType.Commands.UpdateLeave
     public class UpdateLeaveTypeCommand : IRequest<Unit>
     {
         public int Id { get; set; }
-        public int DefualtsDays { get; set; }
+        public int DefaultDays { get; set; }
         public string Name { get; set; } = string.Empty;
-
-
     }
 }

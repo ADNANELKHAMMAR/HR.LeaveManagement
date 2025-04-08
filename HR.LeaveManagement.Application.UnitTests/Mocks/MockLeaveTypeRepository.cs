@@ -36,6 +36,11 @@ namespace HR.LeaveManagement.Application.UnitTests.Mocks
             };
             var moqRepo = new Mock<ILeaveTypeRepository>();
             moqRepo.Setup(r => r.GetAllAsync()).ReturnsAsync(leaveTypes);
+            moqRepo.Setup(r => r.GetByIdAsync(It.IsAny<int>())).ReturnsAsync((int id)=>
+            {
+                return leaveTypes.Find(a => a.Id == id);
+            }
+            );
             moqRepo.Setup(r => r.CreateAsync(It.IsAny<LeaveType>()))
                    .Returns((LeaveType leavetype) =>
                    {

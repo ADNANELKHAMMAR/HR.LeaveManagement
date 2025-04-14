@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR.LeaveManagement.Applicat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR.LeaveManagement.Application.IntegrationTests", "HR.LeaveManagement.Application.IntegrationTests\HR.LeaveManagement.Application.IntegrationTests.csproj", "{925664C0-E622-4E2D-95FD-F212824C63DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR.LeaveManagement.BlazorUI", "HR.LeaveManagement.BlazorUI\HR.LeaveManagement.BlazorUI.csproj", "{A439171E-FFF1-4963-9698-45493CE21DBD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{925664C0-E622-4E2D-95FD-F212824C63DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{925664C0-E622-4E2D-95FD-F212824C63DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{925664C0-E622-4E2D-95FD-F212824C63DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A439171E-FFF1-4963-9698-45493CE21DBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A439171E-FFF1-4963-9698-45493CE21DBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A439171E-FFF1-4963-9698-45493CE21DBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A439171E-FFF1-4963-9698-45493CE21DBD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -79,6 +85,7 @@ Global
 		{EAF4084C-AF08-4A03-B402-0FF7ECD418E0} = {6661AD5B-6937-4041-BD70-E971BAAD2D34}
 		{85AE56D5-FE93-48E5-AAB0-CF1E5CDEF7CA} = {833DFE62-A011-477D-BB86-32B6288882BC}
 		{925664C0-E622-4E2D-95FD-F212824C63DB} = {833DFE62-A011-477D-BB86-32B6288882BC}
+		{A439171E-FFF1-4963-9698-45493CE21DBD} = {FFCEDF8B-D0FD-4424-AEE3-6E8B7536E06F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C9332B03-6DF7-4C41-B129-98377FFA0C8F}
